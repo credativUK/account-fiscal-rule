@@ -90,7 +90,7 @@ class sale_order(osv.Model):
             context = {}
 
         result = super(sale_order, self).onchange_shop_id(
-            cr, uid, ids, shop_id, context=context)
+            cr, uid, ids, shop_id, context=context, partner_id=partner_id)
         if not shop_id or not partner_id:
             return result
 
